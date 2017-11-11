@@ -14,15 +14,14 @@ public class SearchSortedArray {
         while ( first != last && !searchComplete){
             index = first + ( last - first )/2;
             counter++;
-            System.out.println("index:" + index + "last" + last + "first" + first + "counter" + counter);
             if (mynumber == sortedArray[index]){
                     searchComplete = true;
                 System.out.println("Numarul a fost gasit pe pozitia :" + index + "dupa" + counter + "incercari");
             } else {
                 if( mynumber < sortedArray[index] ){
-                        last = index;
+                        last = index - 1;
                 } else {
-                    first = index;
+                    first = index + 1;
                 }
             }
         if ( first == last) {
